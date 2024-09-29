@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    {% if menus %}
+        <ul>
+            {% for menu in menus %}
+            <li><a href="{% url 'pages:submenus' menu.name %}">{{ menu }}</a></li>
+            {% endfor %} 
+        </ul>
+    {% else %}
+    {% load poll_extras %}
+    <h3><a href={% url 'pages:menu' %}>В главное меню</a></h3>
+        {% draw_menu menu_name menu_item %}
+    {% endif %}
+{% endblock content %}
