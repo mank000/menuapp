@@ -17,7 +17,7 @@ Django Tree Menu — это приложение, которое позволя�
 
 2. Перейдите в директорию проекта:
     ```bash
-    cd django-tree-menu
+    cd menuapp
     ```
 
 4. Запустите проект с помощью Docker Compose:
@@ -27,18 +27,18 @@ Django Tree Menu — это приложение, которое позволя�
 
 5. Выполните миграции базы данных:
     ```bash
-    sudo docker-compose exec web python manage.py migrate
+    python manage.py migrate
     ```
 
 6. Создайте суперпользователя для доступа к админке:
     ```bash
-    sudo docker-compose exec web python manage.py createsuperuser
+   python manage.py createsuperuser
     ```
 
 7. Проект будет доступен по адресу: `http://localhost:8000`
 
 ## Стек технологий
-Python 3.9+
+Python 3.11+
 
 Django 3.2+
 
